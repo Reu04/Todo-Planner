@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+    min-height: 100vh;
+    font-family: "Inter", sans-serif;
+    background-color: $color-gray-1;
+}
+
+input,
+label,
+button {
+    transition-duration: $transition-duration;
+}
+
+// Чтобы не появлялся ненужный outline после клика мышью, но появлялся при навигации с клавиатуры:
+:focus-visible {
+    outline: 2px dashed $color-black;
+    outline-offset: 4px;
+    transition-duration: 0s !important;
+}
